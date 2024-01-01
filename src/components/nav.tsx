@@ -3,97 +3,39 @@ import Dropdown from "./dropdown";
 
 export default function Nav() {
   return (
-    <nav className="flex items-center justify-between py-5">
-      <a href="/">
+    <nav className="flex items-center justify-between">
+      <a href="/" className="flex items-center">
         <Image
-          src="https://vasscompany.com/wp-content/uploads/2020/07/logo-vass-blanco.png"
-          alt="Logo"
-          width={70}
-          height={24}
+          src="https://nux.ai/static/img/icons/nux.png"
+          alt="logo"
+          width={20}
+          height={20}
         />
+        <span className="text-lg font-semibold text-white pl-1">NUX.ai</span>
       </a>
-      <ul className="flex items-center gap-6">
-        <li className="text-sm">
+      <ul className="flex items-center [&>li]:px-5 [&>li]:py-8 [&>li]:tracking-[-.01rem]">
+        <li className="text-white font-bold">
+          <a href="#">Explore</a>
+        </li>
+        <li className="text-white font-bold">
+          <a href="#">Docs</a>
+        </li>
+        <li className="text-white font-bold">
+          <Dropdown item="Learn" items={["Learning Center", "FAQ"]} />
+        </li>
+        <li className="text-white font-bold">
           <Dropdown
-            item="Industries"
-            items={[
-              "Retail and consumer goods",
-              "European institutions",
-              "Success cases",
-              "Banking & capital markets",
-              "Energy utilities & environment",
-              "Insurance",
-              "Industry and services",
-              "Public administration",
-              "Telecom & media",
-            ]}
+            item="Company"
+            items={["About", "Careers", "Trust & Security", "Contact"]}
           />
         </li>
-        <li className="text-sm">
-          <Dropdown
-            item="Regions"
-            items={["Spain", "Americas", "Emea and apac"]}
-          />
-        </li>
-        <li className="text-sm">
-          <Dropdown
-            item="We are VASS"
-            items={["VASS team", "About us", "CSR", "Vass Worldwide"]}
-          />
-        </li>
-        <li className="text-sm">
-          <Dropdown
-            item="What we do"
-            items={["Impacts", "Method", "Technologies", "Cases technologies"]}
-          />
-        </li>
-        <li className="text-sm">
-          <a
-            href="https://vasscompany.com/#"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Partners
-          </a>
-        </li>
-        <li className="text-sm">
-          <Dropdown item="Insights" items={["Insight", "Podcasts"]} />
-        </li>
-        <li className="text-sm">
-          <a
-            href="https://vasscompany.com/#"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            News
-          </a>
-        </li>
-        <li className="text-sm">
-          <a
-            href="https://vasscompany.com/#"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Contact us
-          </a>
-        </li>
-        <li className="text-sm">
-          <Dropdown
-            item="Join us!"
-            items={[
-              "Spain",
-              "Peru",
-              "Chile",
-              "UK",
-              "Mexico",
-              "Colombia",
-              "Benelux",
-              "DACH",
-            ]}
-          />
-        </li>
-        <button className="text-sm">ES</button>
       </ul>
+      <a
+        href="#"
+        className="text-white font-bold bg-[#00a587] rounded-full px-5 py-2 tracking-[-.01rem]"
+      >
+        Start building
+      </a>
     </nav>
   );
 }

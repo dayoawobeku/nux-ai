@@ -1,3 +1,6 @@
+"use client";
+
+import { useEffect } from "react";
 import Nav from "@/components/nav";
 
 export default function Home() {
@@ -10,10 +13,10 @@ export default function Home() {
       <div className="home w-full px-4">
         <div className="flex flex-col min-h-screen mx-auto">
           <Nav />
-          <main className="grow flex items-center" id="main-content">
+          <main className="grow flex items-center text-white" id="main-content">
             <p>Main content here</p>
           </main>
-          <footer>
+          <footer className="text-white">
             <p>Footer content here</p>
           </footer>
         </div>

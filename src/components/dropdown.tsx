@@ -18,7 +18,7 @@ export default function Dropdown({
   return (
     <Menu as="div" className="inline-block text-left">
       <div>
-        <Menu.Button className="inline-flex w-full justify-center items-center gap-x-1.5 text-sm">
+        <Menu.Button className="inline-flex w-full justify-center items-center gap-x-1.5 text-sm relative">
           <span>{item}</span>
           <ChevronDownIcon
             className="-mr-1 h-5 w-5 text-white"
@@ -36,16 +36,16 @@ export default function Dropdown({
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95"
       >
-        <Menu.Items className="w-full absolute right-0 z-10 mt-4 origin-top-right bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-          <div className="py-10 uppercase flex justify-between w-full">
+        <Menu.Items className="rounded-lg w-fit absolute z-10 mt-4 origin-top-right bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none p-[1.6rem,.25rem,1.3rem,.25rem]">
+          <div className="py-6 px-2 flex flex-col gap-2 w-fit">
             {items.map((menuItem, index) => (
               <Menu.Item key={index}>
                 {({ active }) => (
                   <a
                     href="#"
                     className={classNames(
-                      active ? "bg-gray-100 text-gray-600" : "text-gray-700",
-                      "block px-4 py-2 text-sm"
+                      active ? "bg-gray-100 text-gray-600" : "text-[#364F6B]",
+                      "block px-8 py-1 font-bold rounded"
                     )}
                   >
                     {menuItem}

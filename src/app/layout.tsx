@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Titillium_Web } from "next/font/google";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 
-const titilliumWeb = Titillium_Web({
+const manrope = Manrope({
   weight: "400",
   subsets: ["latin-ext"],
   display: "swap",
@@ -20,7 +20,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={titilliumWeb.className}>{children}</body>
+      <body
+        className={`${manrope.className} max-w-[1320px] px-4 mx-auto bg-[#061c26]`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
